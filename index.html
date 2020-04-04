@@ -34,24 +34,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    </head> 
 
 
-<script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp.
-</script>
-<script>	
-function draw_b() {//<!--this is the draw function for the rectangle-->
-  var b_canvas = document.getElementById("a");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
-}
-	
-var c = document.getElementById("a");//this is the name draw function
-var ctx = c.getContext("2d");
-ctx.font = "30px Arial";
-ctx.fillText("Adan De Hoyos", 10, 50);
-</script>
-
 
 
 
@@ -76,8 +58,42 @@ ctx.fillText("Adan De Hoyos", 10, 50);
 
 
 </style>
+<body>
+	
 
-<body><!--this creates the orange header for the page with the title of the page-->
+<canvas id="a" width="300" height="225"></canvas><!--this creates the canvas-->
+	
+<script>
+var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp.
+</script>
+<script>	
+function draw_b() {//<!--this is the draw function for the rectangle-->
+  var b_canvas = document.getElementById("a");
+  var b_context = b_canvas.getContext("2d");
+  b_context.fillRect(50, 25, 150, 100);
+}
+var c = document.getElementById("a");//this is the values for the image
+var ctx = c.getContext("2d");
+var img = document.getElementById("scream");
+ctx.drawImage(img, 10, 10);
+function namewrite(){	
+	var c = document.getElementById("a");//this is the variable for name drawing
+	var ctx = c.getContext("2d");
+	ctx.font = "30px Arial";
+	ctx.fillText("Adan De Hoyos", 10, 50);
+}
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img,10,10);
+}
+</script>
+
+
+<!--this creates the orange header for the page with the title of the page-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
@@ -90,10 +106,9 @@ ctx.fillText("Adan De Hoyos", 10, 50);
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
 <a href="content" onclick="draw_b();" class="w3-btn w3-green w3-round"> Draw Rectangle </a><!--this is the button that calls the draw function-->
-<a href="content" onclick="fillText();" class="w3-btn w3-green w3-round"> Write Name </a><!--this is the button to draw the name-->
-
+<a href="content" onclick="namewrite();" class="w3-btn w3-green w3-round"> Write Name </a><!--this is the button to draw the name-->
+<a href="content" onclick="myCanvas();" class="w3-btn w3-green w3-round"> Draw picture </a><!--this is the button to draw the name-->
 	
-<canvas id="a" width="300" height="225"></canvas><!--this creates the canvas-->
 
 
 	
