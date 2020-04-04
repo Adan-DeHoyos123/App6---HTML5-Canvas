@@ -45,6 +45,11 @@ function draw_b() {//<!--this is the draw function for the rectangle-->
   var b_context = b_canvas.getContext("2d");
   b_context.fillRect(50, 25, 150, 100);
 }
+	
+var c = document.getElementById("a");//this is the name draw function
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Adan De Hoyos", 10, 50);
 </script>
 
 
@@ -85,7 +90,7 @@ function draw_b() {//<!--this is the draw function for the rectangle-->
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
 <a href="content" onclick="draw_b();" class="w3-btn w3-green w3-round"> Draw Rectangle </a><!--this is the button that calls the draw function-->
-	
+<a href="content" onclick="fillText();" class="w3-btn w3-green w3-round"> Write Name </a><!--this is the button to draw the name-->
 
 	
 <canvas id="a" width="300" height="225"></canvas><!--this creates the canvas-->
