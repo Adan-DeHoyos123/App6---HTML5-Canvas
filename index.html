@@ -88,6 +88,10 @@ function myCanvas() { //this is the function to draw the image
   var img = document.getElementById("scream");
   ctx.drawImage(img,10,10);
 }
+function clearcanvas(){//this function clears the canvas
+	var b_canvas = document.getElementById("a");
+	b_canvas.width = b_canvas.width;
+}
 </script>
 
 
@@ -105,7 +109,8 @@ function myCanvas() { //this is the function to draw the image
 	
 <a href="content" onclick="draw_b();" class="w3-btn w3-green w3-round"> Draw Rectangle </a><!--this is the button that calls the draw function-->
 <a href="content" onclick="namewrite();" class="w3-btn w3-green w3-round"> Write Name </a><!--this is the button to draw the name-->
-<a href="content" onclick="myCanvas();" class="w3-btn w3-green w3-round"> Draw picture </a><!--this is the button to draw the name-->
+<a href="content" onclick="myCanvas();" class="w3-btn w3-green w3-round"> Draw picture </a><!--this is the button to draw the image-->
+<a href="content" onclick="clearcanvas();" class="w3-btn w3-red w3-round"> Clear canvas </a><!--this is the button to clear the canvas-->
 	
 
 
